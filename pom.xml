@@ -121,6 +121,7 @@
               if a META-INF/build-info.properties file is present -->
             <goals>
               <goal>build-info</goal>
+              <goal>repackage</goal>
             </goals>
             <configuration>
               <additionalProperties>
@@ -129,6 +130,10 @@
                 <java.source>${maven.compiler.source}</java.source>
                 <java.target>${maven.compiler.target}</java.target>
               </additionalProperties>
+              <classifier>spring-boot</classifier>
+                <mainClass>
+                  org.springframework.samples.petclinic.PetClinicApplication
+                </mainClass>
             </configuration>
           </execution>
         </executions>
